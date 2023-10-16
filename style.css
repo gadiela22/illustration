@@ -1,0 +1,323 @@
+:root {
+    --font-family: 'Rubik', sans-serif;
+    --font-size: 16px;
+    --font-weight-normal: 400;
+    --font-weight-name: 500;
+    --font-weight-heading: 700;
+    --sub-heading-at-the-top-of-the-app-UI: hsl(276, 100%, 81%);
+    --massage-back: hsl(275, 100%, 91%);
+    --chat-on-the-left: hsl(276, 55%, 52%);
+    --chat-on-the-right: hsl(271, 15%, 43%);
+    --placeholder-text: hsl(206, 6%, 79%);
+    --main-heading: hsl(271, 36%, 24%);
+    --paragraph: hsl(270, 7%, 64%);
+    --gradient-two: hsl(293, 100%, 63%);
+    --gradient-one: hsl(264, 100%, 61%);
+    --White: hsl(0, 0%, 100%);
+    --app-background: hsl(270, 20%, 96%);
+    --submit-button-background: hsl(271, 36%, 24%);
+    --radio-button-outline: hsl(289, 100%, 72%);
+}
+
+/* End Variables */
+
+/* Start Global Rules */
+
+* {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+body {
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+    background-color: var(--app-background);
+}
+
+.container {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* End Global Rules */
+
+/* Start Components */
+
+.massage-left {
+    background-color: var(--massage-back);
+    color: var(--chat-on-the-left);
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 10px;
+    max-width: 65%;
+    align-self: flex-start;
+}
+
+.massage-left p {
+    font-size: 10px;
+    margin-left: 5px;
+    line-height: 1.2;
+}
+
+.massage-right {
+    background-color: var(--White);
+    color: var(--chat-on-the-right);
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-right: 10px;
+    padding-left: 10px;
+    max-width: 70%;
+    align-self: flex-end;
+}
+
+.massage-right p {
+    font-size: 10px;
+    margin-right: 5px;
+    line-height: 1.2;
+}
+
+/* End Components */
+
+/* Start Project */
+
+.shape {
+    background-image: linear-gradient(45deg, var(--gradient-one), var(--gradient-two));
+    width: 500px;
+    height: 90%;
+    border-radius: 0 0 50% 50%;
+    position: absolute;
+    left: -100px;
+    z-index: -1;
+}
+
+@media (max-width:767px) {
+    .shape {
+        width: 450px;
+        height: 60%;
+        left: -230px;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width:767px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+.mobile {
+    width: 250px;
+    height: max-content;
+    border: 15px solid var(--White);
+    border-radius: 25px;
+    background-color: var(--app-background);
+    box-shadow: 0 0 35px -6.5px black;
+    margin-top: 50px;
+}
+
+.head-app {
+    background-image: linear-gradient(0deg, var(--gradient-one), var(--gradient-two));
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 25px 25px 10px 10px;
+}
+
+.left-head {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.back-shape {
+    width: 10px;
+    height: 10px;
+    border-top: 3px solid white;
+    border-left: 3px solid white;
+    transform: rotate(-45deg);
+}
+
+.head-app .image {
+    margin-left: 5px;
+}
+
+.head-app .image img {
+    width: 30px;
+    height: 30px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.profile {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-1px);
+}
+
+.profile h3 {
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: var(--font-weight-name);
+    color: var(--White);
+}
+
+.profile h3 + p {
+    margin-top: 0;
+    font-size: 10px;
+    color: var(--sub-heading-at-the-top-of-the-app-UI);
+}
+
+.right-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dot {
+    color: var(--White);
+    font-size: 4px;
+    margin: 0 20px 0 0;
+    padding: 0;
+}
+
+.chat {
+    display: flex;
+    flex-direction: column;
+}
+
+.massage-3 {
+    padding: 5px;
+}
+
+.massage-3 img {
+    width: 40px;
+    border-radius: 5px;
+}
+
+.offers {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-left: 10px;
+}
+
+.offers > div {
+    background-image: linear-gradient(-90deg, var(--gradient-one), var(--gradient-two));
+    border-radius: 15px 15px 15px 5px;
+    margin-top: 10px;
+}
+
+.offers p {
+    font-size: 10px;
+    color: var(--White);
+}
+
+.circle {
+    width: 15px;
+    height: 15px;
+    border: 1px solid var(--radio-button-outline);
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.offer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px 15px;
+}
+
+.right-offer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.left-offer p {
+    font-size: 14px;
+    font-weight: var(--font-weight-heading);
+    letter-spacing: 0.5px;
+}
+
+.foot-app {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.typing {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--White);
+    border-radius: 15px;
+    height: 30px;
+}
+
+.typing p {
+    font-size: 10px;
+    color: var(--placeholder-text);
+    margin-left: 10px;
+}
+
+.send {
+    position: relative;
+    transform: rotate(45deg);
+}
+
+.send::after {
+    content: "";
+    top: 6px;
+    left: -20px;
+    width: 10px;
+    height: 10px;
+    border-top: 3px solid white;
+    border-left: 3px solid white;
+    position:absolute;
+    transform: rotate(90deg);
+}
+
+.send::before {
+    position: absolute;
+    top: -3px;
+    right: -2px;
+    content: "";
+    width: 30px;
+    height: 30px;
+    background-color: var(--submit-button-background);
+    border-radius: 50%;
+}
+
+.text {
+    width: 50%;
+}
+
+@media (max-width:767px) {
+    .text {
+        width: 150%;
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+}
+
+.text h1 {
+    color: var(--main-heading);
+}
+
+.text p {
+    color: var(--paragraph);
+    line-height: 1.6;
+}
